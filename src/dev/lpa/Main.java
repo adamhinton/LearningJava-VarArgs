@@ -1,15 +1,26 @@
-//TIP To <b>Run</b> code, press <shortcut actionId="Run"/> or
-// click the <icon src="AllIcons.Actions.Execute"/> icon in the gutter.
-public class Main {
-    public static void main(String[] args) {
-        //TIP Press <shortcut actionId="ShowIntentionActions"/> with your caret at the highlighted text
-        // to see how IntelliJ IDEA suggests fixing it.
-        System.out.printf("Hello and welcome!");
+package dev.lpa;
 
-        for (int i = 1; i <= 5; i++) {
-            //TIP Press <shortcut actionId="Debug"/> to start debugging your code. We have set one <icon src="AllIcons.Debugger.Db_set_breakpoint"/> breakpoint
-            // for you, but you can always add more by pressing <shortcut actionId="ToggleLineBreakpoint"/>.
-            System.out.println("i = " + i);
+public class Main {
+    public static void main(String... args) {
+
+        System.out.println("Hello world again");
+
+        // split works the same as JS
+        String[] splitStrings = "Hello world again".split(" ");
+        printText(splitStrings);
+
+        System.out.println("_".repeat(20));
+        printText("Hello", "jfieoasfsad", "fjadsiofas");
+
+    }
+
+    // var args param gives us a lot more options
+    // We can pass an array, or a simple string
+
+    // Can pass str[] or as many ind strs as we want
+    private static void printText(String... textList){
+        for(String t : textList){
+            System.out.println(t);
         }
     }
 }
