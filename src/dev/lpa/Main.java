@@ -1,34 +1,25 @@
 package dev.lpa;
 
 public class Main {
-    public static void main(String... args) {
+    public static void main(String[] args) {
 
-//        System.out.println("Hello world again");
-//
-//        // split works the same as JS
-//        String[] splitStrings = "Hello world again".split(" ");
-//        printText(splitStrings);
-//
-//        System.out.println("_".repeat(20));
-//        printText("Hello", "jfieoasfsad", "fjadsiofas");
-//
-//        System.out.println("_".repeat(20));
-//        printText();
-
-
-        // Join takes varargs
-        String[] sArray = {"first", "second", "third", "fourth", "fifth"};
-        System.out.println(String.join(",", sArray));
     }
 
-    // var args param gives us a lot more options
-    // We can pass an array, or a simple string
+    private static void readIntegers(){
 
-    // Can pass str[] or as many ind strs as we want
-    private static void printText(String... textList){
-        for(String t : textList){
-            System.out.println(t);
-        }
     }
 
+    private static int findMin(){
+        int placeHolder = -1;
+        return placeHolder;
+    }
 }
+
+// Chal insts:
+// Write readIntegers. takes comma delim num[], entered from console, then returns an array of those nums
+// Write findMin that takes the array, then returns the min val from array
+
+// Main: Call readIntegers  to get the array from user, then print these out, using a method from Arrays
+// Then call findMin, passing the array from readInts
+// Print min element
+// Assume user only enters numbers
