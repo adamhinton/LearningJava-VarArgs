@@ -1,17 +1,45 @@
 package dev.lpa;
 
+import java.util.Arrays;
+import java.util.Scanner;
+
 public class Main {
     public static void main(String[] args) {
 
+        int[] myArray = readIntegers();
+        System.out.printf("\n MyArray: %s", Arrays.toString(myArray));
+
+        int min = findMin(myArray);
+
+        System.out.printf("Min: %d \n", min);
     }
 
-    private static void readIntegers(){
+    private static int[] readIntegers(){
+
+        Scanner scanner = new Scanner(System.in);
+        int[] myArray = new int[5];
+
+        for(int i=0; i<myArray.length; i++){
+            System.out.println("Enter an integer");
+            int myInt = scanner.nextInt();
+
+            myArray[i] = myInt;
+
+        }
+
+        return myArray;
 
     }
 
-    private static int findMin(){
-        int placeHolder = -1;
-        return placeHolder;
+    private static int findMin(int[] arr){
+        int min = arr[0];
+        for (int i = 1; i < arr.length; i++) {
+            if (arr[i] < min) {
+                min = arr[i];
+            }
+        }
+
+        return min;
     }
 }
 
