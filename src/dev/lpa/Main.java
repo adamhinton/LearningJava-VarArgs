@@ -3,15 +3,22 @@ package dev.lpa;
 public class Main {
     public static void main(String... args) {
 
-        System.out.println("Hello world again");
+//        System.out.println("Hello world again");
+//
+//        // split works the same as JS
+//        String[] splitStrings = "Hello world again".split(" ");
+//        printText(splitStrings);
+//
+//        System.out.println("_".repeat(20));
+//        printText("Hello", "jfieoasfsad", "fjadsiofas");
+//
+//        System.out.println("_".repeat(20));
+//        printText();
 
-        // split works the same as JS
-        String[] splitStrings = "Hello world again".split(" ");
-        printText(splitStrings);
 
-        System.out.println("_".repeat(20));
-        printText("Hello", "jfieoasfsad", "fjadsiofas");
-
+        // Join takes varargs
+        String[] sArray = {"first", "second", "third", "fourth", "fifth"};
+        System.out.println(String.join(",", sArray));
     }
 
     // var args param gives us a lot more options
@@ -23,4 +30,5 @@ public class Main {
             System.out.println(t);
         }
     }
+
 }
